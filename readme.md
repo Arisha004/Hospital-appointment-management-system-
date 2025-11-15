@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Hospital Appointment Management System
 ![Description of Image](images/pic1.png)
 
@@ -23,6 +23,3 @@ This is a **Hospital Appointment Management System** built with **HTML, CSS, PHP
 
 This project demonstrates the full **CRUD workflow** and basic user authentication, making it easy to manage hospital appointments.  
 
-=======
-
->>>>>>> 1243d93965e358f838ac00dba8a18b0ed81dceab
