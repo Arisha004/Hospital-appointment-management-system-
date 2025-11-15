@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $row=$result->fetch_assoc();
  
     if (password_verify($password, $row["password"])) { //database mei jo password hai $row[password] woh match karraha hai $password jo user ne form mein dia hai aur humne usko variable $password mein dala hai uper password verify function use karke built-in php ka
-    header("Location: landingpage.html");
+    header("Location: index.php");
   //Immediately stops the execution of the PHP script.
   
   exit();
@@ -48,10 +48,11 @@ No delay — the user doesn’t see any message on the current page.*/
     <nav>
       <ul>
         <li><a href="landingpage.html">Home</a></li>
-          <li><a href="signup.php">Signup</a></li>
-        <li><a href="login.php">Login</a></li>
+        
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
+          <li><a href="signup.php">Signup</a></li>
+        <li><a href="login.php">Login</a></li>
       </ul>
     </nav>
   </header>
@@ -67,10 +68,22 @@ No delay — the user doesn’t see any message on the current page.*/
 
       <button type="submit">Login</button>
 
-      <p>Don’t have an account? <a href="signup.php">Sign up here</a></p>
-      
+      <p>Donot have an account? <a href="signup.php">Sign up here</a></p>
+       
+
+</div>
+</div>
+
       </form>
+       <div class="form1-container">
+     
+    <form action="listsusers.php" method="get">
+    <button type="submit">View Users</button>
+    </form>
+    </div>
+      
   </div>
+  
   
  <footer>
     <p>© 2025 Appointment Management System , Made by Arisha Mumtaz(2312358)</p>

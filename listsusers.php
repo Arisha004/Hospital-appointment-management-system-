@@ -1,29 +1,22 @@
 <?php
 include 'db.php';
-$sql="select * from appointments";
+$sql="select * from users";
 $result=$conn->query($sql);
 
 
 ?>
 
-<?php
-include 'db.php';
-  if(isset($_GET['search'])){
-    $filteredvalues=$_GET['search'];
-    $sql = "SELECT * FROM appointments 
-        WHERE full_name LIKE '%$filteredvalues%'";
-    $result=$conn->query($sql);
-
-    }
 
 
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <title>Document</title>
   <link rel="stylesheet" href="style2.css">
   <style>
+     .container1 { width: 80%; margin: 40px auto; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+ 
     table{
     width: 100%;
     border-collapse: collapse;
@@ -58,37 +51,23 @@ a{
            <li><a href="landingpage.html">Home</a></li>
           <li><a href="index.php">Book Appointment</a></li>
           
-          <li><a href="signup.php">Logout</a></li>
-          
       
          </ul>
     </nav>
   </header>
 
    
-        <form action="" method="get">
-<div class="container1">
-    <h1>Search Booking Records </h1> <br>
-
-
-    <input type="text" name="search" required value="<?php if(isset($_GET['search'])){
-    echo $_GET['search'];
-}?>" placeholder="Search here">
-    <button type="submit">Search</button>
-
-</div>
-</form>
 
       <div class="container1">
-    <h2>List of Appointments Booked</h2><br>
+    <h2>List of Users</h2><br>
+    <a href="login.php">Go back</a>
     
-    <p><a href="index.php"> Go back to booking appointment page</a></p><br>
     
     
    <?php
    
    
-if (isset($result) && $result->num_rows > 0){
+if ($result->num_rows > 0){
 
 echo "<table border='1' cellpadding='10'>";
   echo   "<tr>
@@ -96,7 +75,7 @@ echo "<table border='1' cellpadding='10'>";
     <th>Name</th>
     <th>Email</th>
 
-    <th>Action</th>
+    <th>Password</th>
     
     </tr>";
   while($items = $result->fetch_assoc()) {
@@ -105,12 +84,10 @@ echo "<table border='1' cellpadding='10'>";
         echo "<tr>";
 
     echo "<td>".$items["id"]."</td>";
-    echo "<td>".$items["full_name"]."</td>";
+    echo "<td>".$items["username"]."</td>";
     echo "<td>".$items["email"]."</td>";
-      echo "<td><a href='detail.php?id=$items[id]'>More Info</a><br><br>
-    <a href='update.php?id=$items[id]'>Update</a><br><br>
-    <a href='delete.php?id=$items[id]'>Delete</a>
-    </td>";
+    echo "<td>".$items["password"]."</td>";
+   
 
        echo "</tr>";    
          
@@ -118,7 +95,7 @@ echo "<table border='1' cellpadding='10'>";
     
     echo "</table>";
    }
-    elseif (isset($_GET['search'])){
+    else{
       echo "<br>";  
       echo "No Record Found";
     }

@@ -58,8 +58,6 @@ a{
            <li><a href="landingpage.html">Home</a></li>
           <li><a href="index.php">Book Appointment</a></li>
           
-          <li><a href="signup.php">Logout</a></li>
-          
       
          </ul>
     </nav>

@@ -49,12 +49,11 @@ It checks if a variable exists and is not null.*/
     <div class="logo">Hospital Appointment Management System</div>
     <nav>
       <ul>
-        <li><a href="landingpage.html">Home</a></li>
-          <li><a href="signup.php">Signup</a></li>
-        <li><a href="login.php">Login</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+           <li><a href="landingpage.html">Home</a></li>
+          <li><a href="index.php">Book Appointment</a></li>
+          
+    
+        </ul>
     </nav>
   </header>
 

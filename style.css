@@ -154,7 +154,6 @@ input:focus, textarea:focus {
 
 .contact-form .btn:hover {
   background-color: #7498a3;
-  transform: translateY(-2px);
 }
 
 /* Navbar */
@@ -185,7 +184,6 @@ input:focus, textarea:focus {
   text-decoration: none;
   color: #333;
   margin-left: 25px;
-  transition: 0.3s;
 }
 
 .navbar ul li a:hover {
@@ -210,7 +208,6 @@ input:focus, textarea:focus {
   cursor: pointer;
   font-weight: 500;
 
-  transition: 0.3s;
    text-align: center;
 }
 
@@ -251,7 +248,7 @@ button:hover {
   text-decoration: none;
   font-weight: 300;
   transition: 0.3s;
-  width: 250px;
+  width: 300px;
 }
 
 .btn:hover {
