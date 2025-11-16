@@ -36,7 +36,7 @@
 
     <label>Service Type:<span>*</span></label>
     <select name="service_type" required>
-      <option value="" disabled selected> Select Service </option>
+      <option value=""> Select Service </option>
       <option value="Consultation">Consultation</option>
       <option value="Follow-up">Follow-up</option>
       <option value="Check-up">Check-up</option>
@@ -54,11 +54,11 @@
       
        <label>Gender:<span>*</span></label>
     <select name="gender" required>
-      <option value="" disabled selected> Select Gender </option>
+      <option value=""> Select Gender </option>
       <option value="Male">Male</option>
       <option value="Female">Female</option>
       <option value="Other">Other</option>
-    </select> 
+    </select> -->
 
     <label>Message (optional):</label>
     <textarea name="message"  rows="3"  placeholder="Add any additional notes..."></textarea>

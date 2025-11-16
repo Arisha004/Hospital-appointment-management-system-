@@ -36,7 +36,7 @@
 
     <label>Service Type:<span>*</span></label>
     <select name="service_type" required>
-      <option value="" disabled selected> Select Service </option>
+      <option value=""> Select Service </option>
       <option value="Consultation">Consultation</option>
       <option value="Follow-up">Follow-up</option>
       <option value="Check-up">Check-up</option>
@@ -54,11 +54,11 @@
       
        <label>Gender:<span>*</span></label>
     <select name="gender" required>
-      <option value="" disabled selected> Select Gender </option>
+      <option value=""> Select Gender </option>
       <option value="Male">Male</option>
       <option value="Female">Female</option>
       <option value="Other">Other</option>
-    </select> 
+    </select>
 
     <label>Message (optional):</label>
     <textarea name="message"  rows="3"  placeholder="Add any additional notes..."></textarea>
@@ -82,3 +82,36 @@
 </div>
 </body>
 </html>
+<form action="" method="POST">
+  <label for="full_name">Full Name:</label>
+  <input type="text" id="full_name" name="full_name" required>
+  <br><br>
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" required>
+  <br><br>
+  <label for="phone">Phone:</label>
+  <input type="text" id="phone" name="phone" required>
+  <br><br>
+  <label>Gender:</label>
+  <input type="radio" id="male" name="gender" value="Male"> <label for="male">Male</label>
+  <input type="radio" id="female" name="gender" value="Female"> <label for="female">Female</label>
+  <br><br>
+  <label for="service_type">Service Type:</label>
+  <select id="service_type" name="service_type" required>
+    <option value="">Select Service</option>
+    <option value="Haircut">Haircut</option>
+    <option value="Facial">Facial</option>
+    <option value="Massage">Massage</option>
+  </select>
+  <br><br>
+  <label for="appointment_date">Appointment Date:</label>
+  <input type="date" id="appointment_date" name="appointment_date" required>
+  <br><br>
+  <label for="appointment_time">Appointment Time:</label>
+  <input type="time" id="appointment_time" name="appointment_time" required>
+  <br><br>
+  <label for="message">Message:</label>
+  <textarea id="message" name="message" rows="4" cols="40"></textarea>
+  <br><br>
+  <button type="submit">Submit</button>
+</form>

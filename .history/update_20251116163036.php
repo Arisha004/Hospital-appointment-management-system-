@@ -52,7 +52,7 @@ $row=$result->fetch_assoc();
 
      <h1>Update Booking Details</h1> <br>
 
-<form id="registerForm"  action="update.php" method="POST">
+<form id="registerForm"  action=".php" method="POST">
         <input type="hidden" name="id" value="<?php echo $id ;?>">
 
 
@@ -67,7 +67,7 @@ $row=$result->fetch_assoc();
 
     <label>Service Type:</label>
     <select name="service_type" required>
-      <option value="" disabled selected>-- Select Service --</option>
+      <option value="">-- Select Service --</option>
       <option value="Consultation"
            <?php
       if($row['service_type']=='Consultation'){
@@ -111,7 +111,7 @@ $row=$result->fetch_assoc();
 
     <label>Gender:</label>
     <select name="gender" required>
-      <option value="" disabled selected>-- Select Gender --</option>
+      <option value="">-- Select Gender --</option>
       <option value="Male"
       <?php
       if($row['gender']=='Male'){

@@ -10,6 +10,7 @@ elseif(isset($_POST['id'])){
 else{
     die('missing id');
 }
+
 $sql="select * from appointments where id='$id' ";
 $result=$conn->query($sql);
 //fetch_assoc() converts a database row into  array.
@@ -67,7 +68,7 @@ $row=$result->fetch_assoc();
 
     <label>Service Type:</label>
     <select name="service_type" required>
-      <option value="" disabled selected>-- Select Service --</option>
+      <option value="">-- Select Service --</option>
       <option value="Consultation"
            <?php
       if($row['service_type']=='Consultation'){
@@ -111,7 +112,7 @@ $row=$result->fetch_assoc();
 
     <label>Gender:</label>
     <select name="gender" required>
-      <option value="" disabled selected>-- Select Gender --</option>
+      <option value="">-- Select Gender --</option>
       <option value="Male"
       <?php
       if($row['gender']=='Male'){

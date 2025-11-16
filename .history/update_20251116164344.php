@@ -111,7 +111,7 @@ $row=$result->fetch_assoc();
 
     <label>Gender:</label>
     <select name="gender" required>
-      <option value="" disabled selected>-- Select Gender --</option>
+      <option value=""  disabled selected>-- Select Gender --</option>
       <option value="Male"
       <?php
       if($row['gender']=='Male'){

@@ -10,6 +10,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $appointment_time = $_POST['appointment_time'];
     $gender = $_POST['gender'];
     $message=$_POST['message'];
+  
     
   
     $sql = "INSERT INTO appointments (full_name,email,phone,service_type,appointment_date,appointment_time, gender,message) VALUES ('$full_name','$email','$phone','$service_type','$appointment_date','$appointment_time','$gender','$message')";
@@ -24,7 +25,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
           </script>";
 }
 
-//Superglobals = special PHP arrays available everywhere without global keyword.
+//Superglobals = special PHP arrays available everywhere files, etc.) without global keyword.
  
 }
  

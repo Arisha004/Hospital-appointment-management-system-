@@ -54,7 +54,7 @@
       
        <label>Gender:<span>*</span></label>
     <select name="gender" required>
-      <option value="" disabled selected> Select Gender </option>
+      <option value=""> Select Gender </option>
       <option value="Male">Male</option>
       <option value="Female">Female</option>
       <option value="Other">Other</option>

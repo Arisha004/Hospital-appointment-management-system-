@@ -11,6 +11,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $gender = $_POST['gender'];
     $message=$_POST['message'];
     
+    
   
     $sql = "INSERT INTO appointments (full_name,email,phone,service_type,appointment_date,appointment_time, gender,message) VALUES ('$full_name','$email','$phone','$service_type','$appointment_date','$appointment_time','$gender','$message')";
   if ($conn->query($sql) === TRUE) {
